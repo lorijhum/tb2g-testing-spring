@@ -49,6 +49,7 @@ class NotProfileCondition implements Condition {
 			if (attrs != null) {
 				for (Object value : attrs.get("value")) {
 					if (context.getEnvironment().acceptsProfiles(((String[]) value))) {
+
 						return false;
 					}
 				}
